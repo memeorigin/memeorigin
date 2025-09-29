@@ -12,9 +12,9 @@ People see a meme or slang term and wonder: *what does this mean and where did i
 
 ## Architecture (planned)
 flowchart LR
-  A[User term/image] --> B[Retriever: BM25 + embeddings]
-  B --> C[RAG Context: sources (KYM, Reddit, UD, etc.)]
-  A --> D[Image path: OCR + CLIP NN]
-  D --> B
-  C --> E[LLM: grounded summary + citations]
-  E --> F[UI: explanation, origin, timeline, examples]
+  A[User term/image] --> B[Retriever: BM25 + embeddings]\
+  B --> C[RAG Context: sources (KYM, Reddit, UD, etc.)]\
+  A --> D[Image path: OCR + CLIP NN]\
+  D --> B\
+  C --> E[LLM: grounded summary + citations]\
+  E --> F[UI: explanation, origin, timeline, examples]\
