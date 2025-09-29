@@ -17,4 +17,4 @@ flowchart LR
   A --> D[Image path: OCR + CLIP NN]\
   D --> B\
   C --> E[LLM: grounded summary + citations]\
-  E --> F[UI: explanation, origin, timeline, examples]\
+  E --> F[UI: explanation, origin, timeline, examples]
