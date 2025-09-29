@@ -8,7 +8,7 @@ People see a meme or slang term and wonder: *what does this mean and where did i
 
 ## MVP (v0)
 - Input: **term** or **image**
-- Output: 3–5 sentence explainer + **Origin (first seen + link)** + **Timeline** + **2–3 citations** + examples
+- Output: 3–5 sentence explainer + **Origin (first seen + link)** + **2–3 citations** 
 
 ## Architecture (planned)
 flowchart LR
