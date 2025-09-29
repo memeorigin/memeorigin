@@ -1,0 +1,54 @@
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# --- Node / Next.js (web/) ---
+node_modules/
+.next/
+dist/
+out/
+coverage/
+.vercel/
+.turbo/
+web/.env.local
+web/.env.development.local
+web/.env.test.local
+web/.env.production.local
+
+# --- Python (api/ + workers/) ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+.envrc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+coverage.xml
+api/.env.local
+workers/.env.local
+
+# --- Dotenv (keep the example file tracked) ---
+.env
+.env.*
+!.env.example
+
+# --- Logs & caches ---
+*.log
+logs/
+.cache/
+
+# --- Docker / local services ---
+# (data folder is for local artifacts like FAISS indexes)
+data/*
+!data/.gitkeep
+
+# --- Misc build artifacts ---
+*.bak
+*.tmp
