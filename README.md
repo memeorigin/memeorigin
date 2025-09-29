@@ -11,7 +11,6 @@ People see a meme or slang term and wonder: *what does this mean and where did i
 - Output: 3–5 sentence explainer + **Origin (first seen + link)** + **Timeline** + **2–3 citations** + examples
 
 ## Architecture (planned)
-```mermaid
 flowchart LR
   A[User term/image] --> B[Retriever: BM25 + embeddings]
   B --> C[RAG Context: sources (KYM, Reddit, UD, etc.)]
