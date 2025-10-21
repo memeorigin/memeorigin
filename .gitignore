@@ -52,3 +52,10 @@ data/*
 # --- Misc build artifacts ---
 *.bak
 *.tmp
+
+# --- Memeorigin services (LLM adapters & datasets) ---
+services/*/data/**
+!services/*/data/.keep
+services/*/models/adapters/**
+!services/*/models/adapters/.gitkeep
+

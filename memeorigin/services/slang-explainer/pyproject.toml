@@ -1,0 +1,11 @@
+[project]
+name = "slang-explainer"
+version = "0.0.1"
+requires-python = ">=3.10"
+dependencies = ["fastapi", "uvicorn"]
+
+[tool.uvicorn]
+app = "src.router:app"
+host = "0.0.0.0"
+port = 8001
+reload = true
