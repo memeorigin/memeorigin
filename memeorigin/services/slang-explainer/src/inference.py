@@ -3,12 +3,12 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
 BASE_MODEL = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
-ADAPTER_DIR = os.path.join(os.path.dirname(__file__), "..", "models", "adapters", "tinyllama-lora@2025-10-27")
+ADAPTER_DIR = os.path.join(os.path.dirname(__file__), "..", "models", "adapters", "tinyllama-lora@2025-10-29")
 
 INSTRUCT_TEMPLATE = (
     "Task: Explain the internet slang.\n"
-    "Term: {term}\n"
-    "Format:\nDefinition: <one or two sentences>\nExample: <one sentence>"
+    "Term: {term}\n\n"
+    "Definition:"
 )
 
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL, use_fast=True)
@@ -33,8 +33,9 @@ def generate(term: str, max_new_tokens: int = 100) -> str:
         out = model.generate(
             **inputs,
             max_new_tokens=max_new_tokens,
-            do_sample=True,
-            temperature=0.7,
-            top_p=0.9,
+            do_sample=False,  # Use greedy decoding for more deterministic output
+            num_beams=1,
+            repetition_penalty=1.2,  # Reduce repetition
+            pad_token_id=tokenizer.eos_token_id,
         )
     return tokenizer.decode(out[0], skip_special_tokens=True)
